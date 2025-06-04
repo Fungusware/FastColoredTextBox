@@ -29,7 +29,7 @@ dotnet pack "FastColoredTextBox\FastColoredTextBox.csproj" --interactive --outpu
 
 REM Upload
 echo Upload
-dotnet nuget push --source "https://fungusware.pkgs.visualstudio.com/Fungusware/_packaging/Default/nuget/v3/index.json" --interactive --api-key az .\package\Fungusware-FCTB.*.nupkg
+dotnet nuget push --source "https://api.nuget.org/v3/index.json" --interactive --api-key oy2py4uamxpaev2iwdwqyp4gfe3jcnguji2zrvd5yr26jq .\package\Fungusware-FCTB.*.nupkg
 
 GOTO _EXIT_
 

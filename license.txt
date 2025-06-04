@@ -6,6 +6,6 @@
 
   License: GNU Lesser General Public License (LGPLv3)
 
-  Email: pavel_torgashov@ukr.net.
+  Email: support@fungusware.com
 
-  Copyright (C) Pavel Torgashov, 2011-2016. 
+  

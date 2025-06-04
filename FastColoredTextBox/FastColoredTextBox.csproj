@@ -1,9 +1,9 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <OutputType>Library</OutputType>
+	  <TargetFrameworks>net6.0-windows;net8.0-windows</TargetFrameworks>
+	  <OutputType>Library</OutputType>
     <RootNamespace>FastColoredTextBoxNS</RootNamespace>
-    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
     <ImportWindowsDesktopTargets>true</ImportWindowsDesktopTargets>
   </PropertyGroup>
@@ -15,33 +15,23 @@
   </PropertyGroup>
   <PropertyGroup>
     <AssemblyOriginatorKeyFile>FCTB_key.snk</AssemblyOriginatorKeyFile>
-    <RepositoryUrl>https://github.com/Daxanius/FastColoredTextBox/</RepositoryUrl>
-    <PackageReleaseNotes>Migrated to .NET 6.0</PackageReleaseNotes>
+    <RepositoryUrl>https://github.com/Fungusware/FastColoredTextBox/</RepositoryUrl>
+    <PackageReleaseNotes>Migrated to .NET 6.0 /.NET 8.0</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
-    <Authors>Pavel Torgashov, Daxanius</Authors>
-    <Version>2.16.26.120</Version>
-    <PackageId>Dax-FCTB</PackageId>
-    <PackageProjectUrl>https://github.com/Daxanius/FastColoredTextBox/</PackageProjectUrl>
+    <Authors>Pavel Torgashov, Daxanius, Fungusware</Authors>
+    <Version>0.0.0.1</Version>
+    <PackageId>Fungusware-FCTB</PackageId>
+    <PackageProjectUrl>https://github.com/Fungusware/FastColoredTextBox/</PackageProjectUrl>
     <Copyright>GNU License</Copyright>
-    <Description>A fork of FastColoredTextBox by Pavel Torgashov by Daxanius.</Description>
+    <Description>A fork of FastColoredTextBox by Daxanius by Fungusware.</Description>
     <RepositoryType>git</RepositoryType>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <PackageLicenseFile>license.txt</PackageLicenseFile>
-    <PackageIcon>icon.png</PackageIcon>
+    <PackageIcon>logo.jpg</PackageIcon>
   </PropertyGroup>
   <ItemGroup>
-    <None Include="$(SolutionDir)icon.png">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-    <None Include="$(SolutionDir)README.md">
-      <Pack>True</Pack>
-      <PackagePath>\</PackagePath>
-    </None>
-		<None Include="$(SolutionDir)license.txt">
-			<Pack>True</Pack>
-			<PackagePath>\</PackagePath>
-		</None>
+    <Content Include="..\license.txt" Link="license.txt" />
+    <Content Include="..\logo.jpg" Link="logo.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System.Design" />
@@ -62,5 +52,22 @@
     <Compile Update="UnfocusablePanel.cs">
       <SubType>UserControl</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\license.txt">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\logo.jpg">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+    <None Include="..\README.md" Link="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 </Project>

@@ -1696,7 +1696,8 @@ namespace FastColoredTextBoxNS {
 		/// </summary>
 		public new void Invalidate() {
 			if (InvokeRequired)
-				BeginInvoke(new MethodInvoker(Invalidate));
+                // Fix for CS0104: Explicitly specify the namespace for 'MethodInvoker' to resolve ambiguity.
+                BeginInvoke(new System.Windows.Forms.MethodInvoker(Invalidate));
 			else
 				base.Invalidate();
 		}
@@ -2147,7 +2148,7 @@ namespace FastColoredTextBoxNS {
 
 		private void ResetTimer(Timer timer) {
 			if (InvokeRequired) {
-				BeginInvoke(new MethodInvoker(() => ResetTimer(timer)));
+				BeginInvoke(new System.Windows.Forms.MethodInvoker(() => ResetTimer(timer)));
 				return;
 			}
 			timer.Stop();
@@ -3105,12 +3106,12 @@ namespace FastColoredTextBoxNS {
 				PerformLayout();
 
 			if (IsHandleCreated)
-				BeginInvoke((MethodInvoker)OnScrollbarsUpdated);
+				BeginInvoke((System.Windows.Forms.MethodInvoker)OnScrollbarsUpdated);
 		}
 
 		private void OnMagicUpdateScrollBars() {
 			if (InvokeRequired) {
-				Invoke(new MethodInvoker(OnMagicUpdateScrollBars));
+				Invoke(new System.Windows.Forms.MethodInvoker(OnMagicUpdateScrollBars));
 				return;
 			}
 

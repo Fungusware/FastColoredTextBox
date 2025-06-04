@@ -1,7 +1,8 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net6.0-windows</TargetFramework>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+	  <TargetFrameworks>net6.0-windows;net8.0-windows</TargetFrameworks>
+
+	  <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <OutputType>WinExe</OutputType>
     <StartupObject>TesterVB.My.MyApplication</StartupObject>
     <MyType>WindowsForms</MyType>

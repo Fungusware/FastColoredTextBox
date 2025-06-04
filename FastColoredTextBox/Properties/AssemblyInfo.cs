@@ -21,6 +21,9 @@ using System.Runtime.InteropServices;
 // The following GUID is for the ID of the typelib if this project is exposed to COM
 [assembly: Guid("95be11b3-45bc-4512-be26-a860a78bd1f1")]
 
+// This attribute is used to specify the minimum version of Windows that the assembly supports.
+[assembly: System.Runtime.Versioning.SupportedOSPlatform("windows")]
+
 // Version information for an assembly consists of the following four values:
 //
 //      Major Version
